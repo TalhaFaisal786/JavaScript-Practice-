@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class employee{
+           constructor(name,age,salary){
+            this.empname=name;
+            this.empage=age;
+            this.empsalary=salary;
+            console.log("JOB : SELF EMPLOYED")
+           }
+
+           info(){
+            document.write(`<h3> EMPLOYEE DETAILS </h3>
+                         Ap Ka Name :${this.empname} hai.<br>
+                         Ap ki Age hai :${this.empage} hai.<br>
+                         Ap ki Salary hia :${this.empsalary} hai.<br>  `)
+
+           }
+        }
+
+        class Manager extends employee{
+
+            
+           
+            info(){
+                super.info()
+                let name;
+                let age;
+                let salary;
+            document.write(`<h3> MANAGER DETAILS </h3>
+                         Ap Ka Name :${this.empname} hai.<br>
+                         Ap ki Age hai :${this.empage} hai.<br>
+                         Ap ki Salary hia :${this.empsalary} hai.<br>  `)
+
+           }
+        }
+
+        let a = new Manager("TALHA",19,50000);
+        a.info();
+
+    </script>
+</body>
+</html>
